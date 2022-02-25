@@ -1,0 +1,29 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  labels:
+    app: microservice-app-example
+  name: zipkin
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      service: zipkin
+  template:
+    metadata:
+      labels:
+        app: microservice-app-example
+        service: zipkin
+    spec:
+      hostAliases:
+      - ip: "52.32.94.26"
+        hostnames:
+        - "asp.eksv21.deepfactor.io"
+      containers:
+      - env:
+        image: openzipkin/zipkin
+        name: zipkin
+        ports:
+        - containerPort: 9411
+        - containerPort: 9410
+      restartPolicy: Always
