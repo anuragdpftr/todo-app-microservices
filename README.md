@@ -32,6 +32,12 @@ docker-compose up --build
 
 Then go to http://127.0.0.1:8080 for web UI. [Zipkin](https://zipkin.io) is available on http://127.0.0.1:9411 by default.
 
+## How to run using k8s
+
+```
+kubectl create -R -f k8s/ -n asp-todo-app
+```
+
 ## Contribution
 
 This is definitely a contrived project, so it can be extended in any way you want. If you have a crazy idea (like RESTful API in Haskell that counts kittens of particular user) - just submit a PR.
