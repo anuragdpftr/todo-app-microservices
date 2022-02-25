@@ -16,7 +16,7 @@ spec:
         service: zipkin
     spec:
       hostAliases:
-      - ip: "52.32.94.26"
+      - ip: "52.89.65.81"
         hostnames:
         - "asp.eksv21.deepfactor.io"
       containers:

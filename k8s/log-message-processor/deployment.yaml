@@ -19,7 +19,7 @@ spec:
         df.k8-app.comp.log-message-processor/lsa: "python"
     spec:
       hostAliases:
-      - ip: "52.32.94.26"
+      - ip: "52.89.65.81"
         hostnames:
         - "asp.eksv21.deepfactor.io"
       containers:
